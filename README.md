@@ -10,3 +10,7 @@ To use, simply execute:
 pushall
 ```
 
+To compile using GCC:
+```
+g++ pushall.cpp -o pushall
+```
