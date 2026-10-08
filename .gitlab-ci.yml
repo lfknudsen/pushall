@@ -6,8 +6,12 @@ build:
   # install the necessary build tools when needed
   # before_script:
   #   - apt update && apt -y install make autoconf
+  before_script:
+    - apt update && apt -y install g++-mingw-w64
   script:
     - g++ pushall.cpp -o pushall -O3
+    - x86_64-w64-mingw32-g++ pushall.cpp -o pushall.exe -O3
   artifacts:
     paths:
       - pushall
+      - pushall.exe
